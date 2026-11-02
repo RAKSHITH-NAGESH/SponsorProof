@@ -57,10 +57,3 @@ For the full feature, setup, workflow and limitation guide, see [SPONSORPROOF_CO
 
 For a step-by-step illustrated walkthrough, see the [SponsorProof Complete Workflow Guide (PDF)](output/pdf/SponsorProof_Complete_Workflow_Guide.pdf).
 
-## Optional: deploy a password-protected Render preview
-
-A Render deployment template is included in `render.yaml`. It is configured as a **private pilot**, not an open public marketplace: one shared username and password protect the whole workspace. Anyone with that shared login can view, add, or delete workspace records. Do not use it with outside users who expect individual accounts or private profiles.
-
-Render needs this project in a GitHub repository. The repository must not contain `backend/.env` or the SQLite database; both are excluded by `.gitignore`. In Render, create a new Blueprint from the repository and enter the requested `APP_USERNAME`, `APP_PASSWORD`, `TWITCH_CLIENT_ID` and `TWITCH_CLIENT_SECRET` values in the dashboard. Render will build and start the service using `render.yaml`.
-
-This template uses a paid web service and a persistent disk so the SQLite database survives restarts and redeploys. Review Render's current plan and disk charges before creating the service. A public multi-user launch still needs individual accounts, ownership and privacy protections.
