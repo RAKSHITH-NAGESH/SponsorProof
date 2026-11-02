@@ -55,6 +55,8 @@ This helper works without Twitch credentials. Its profiles and opportunities are
 
 For the full feature, setup, workflow and limitation guide, see [SPONSORPROOF_COMPLETE_GUIDE.md](SPONSORPROOF_COMPLETE_GUIDE.md).
 
+For a step-by-step illustrated walkthrough, see the [SponsorProof Complete Workflow Guide (PDF)](output/pdf/SponsorProof_Complete_Workflow_Guide.pdf).
+
 ## Optional: deploy a password-protected Render preview
 
 A Render deployment template is included in `render.yaml`. It is configured as a **private pilot**, not an open public marketplace: one shared username and password protect the whole workspace. Anyone with that shared login can view, add, or delete workspace records. Do not use it with outside users who expect individual accounts or private profiles.
