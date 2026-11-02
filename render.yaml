@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: sponsorproof
+    runtime: node
+    plan: starter
+    buildCommand: npm ci && npm ci --prefix backend && npm run build
+    startCommand: npm run start:api
+    healthCheckPath: /api/health
+    autoDeploy: true
+    disk:
+      name: sponsorproof-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_PATH
+        value: /var/data/sponsorproof-agency.sqlite
+      - key: APP_USERNAME
+        sync: false
+      - key: APP_PASSWORD
+        sync: false
+      - key: TWITCH_CLIENT_ID
+        sync: false
+      - key: TWITCH_CLIENT_SECRET
+        sync: false
